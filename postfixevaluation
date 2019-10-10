@@ -1,0 +1,30 @@
+import re
+postfix=str(input("Enter the postfix expression and end the symbol by $"))
+stack=[]
+list_input=list(postfix)
+for i in list_input:
+    str1=str(i)
+    if i.isdigit():
+        stack.append(i)
+    else:
+        top2=int(stack.pop(-1))
+        top1=int(stack.pop(-1))
+        if i=='*':
+            result=top1*top2
+            stack.append(result)
+        if i=='+':
+            result=top1+top2
+            stack.append(result)
+        if i=='-':
+            result=top1-top2
+            stack.append(result)
+        if i=='/':
+            result=top1//top2
+            stack.append(result)
+        if i=='^':
+            result=top1**top2
+            stack.append(result)
+
+
+
+print(stack[0])
