@@ -1,5 +1,5 @@
 import re
-postfix=str(input("Enter the postfix expression and end the symbol by $"))
+postfix=str(input("Enter the postfix expression and end the symbol"))
 stack=[]
 list_input=list(postfix)
 for i in list_input:
